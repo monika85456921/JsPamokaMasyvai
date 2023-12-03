@@ -99,13 +99,42 @@ const rezultatas2 = ivairusSk.filter(function(el){
     return el < 0;
 });
 console.log(rezultatas2);
-// find, pirma rasta elementa
+// find, pirma rasta elementa rodo
 const rasti = ivairusSk.find((el) => el > 20);
 console.log(rasti);
 
 
+//findIndex, sugazina pirma rasta elementa kuri tenkina salyga
+
+const isLargeNumber = (element) => element >= 20;
+console.log(ivairusSk.findIndex(isLargeNumber));
+
+//indexOf
+
+console.log(ivairusSk.indexOf(6));
+
+//includes, grazina true false
+
+const pets = ["dog", "cat","parrot","snake"];
+console.log(pets.includes("cat"));
+console.log(pets.includes("dragon"));
+
+//sort, "sutvarko" array, pakeicia elementu eile
+const sortas = ivairusSk.sort();
+console.log(sortas)
+
+//concat
+console.log(pets.concat(["rat","mouse"]));
 
 
+////// spread, leidizia iterable, array arba stringui, buti praplestu
+const pirmasMasyvas = ["vienas","du","trys"];
+const antrasMasyvas = [...pirmasMasyvas,"keturi","penki"];
+console.log(antrasMasyvas);
+//////rest, surenka kelis elementus ir sutrumpina(sujungia) juos i viena elementa(array)
 
+const {a,b, ...others} = {a : 1, b: 2,c: 3};
+console.log(others);
 
-
+console.log(pets instanceof Array);
+console.log(Array.isArray(pets));
